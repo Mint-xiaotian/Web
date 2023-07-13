@@ -1,4 +1,5 @@
-# <img itemprop="image" class="avatar flex-shrink-0 mb-3 mr-3 mb-md-0 mr-md-4" src="https://avatars.githubusercontent.com/u/139145325?s=200&v=4?s=200&amp;v=4" width="60" height="60"> EternalTide Studios
+# <img itemprop="image" class="avatar flex-shrink-0 mb-3 mr-3 mb-md-0 mr-md-4" src="https://avatars.githubusercontent.com/u/139145325?s=200&v=4?s=200&amp;v=4" width="60" height="60"> 
+# EternalTide Studios
 简称: "永恒潮汐网络工作室"<br>
 创立于``2019`` ``7`` ``24``<br>
 
