@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>404 | EternalTide Studios Web Site</title>
+    <style>
+        #J_dotLine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        
+        .container {
+            top:40%;
+            width: 60%;
+            margin: 10% auto 0;
+            padding: 2% 5%;
+            position: absolute;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            line-height: 2.3
+        }
+
+        a {
+            color: #000
+        }
+    </style>
+</head>
+<body>
+    <canvas id="J_dotLine"></canvas>
+    <div class="container">
+        <h1 style="color:;">404</h1>
+        <h3>awa</h3>
+        估计小天又在....<br>
+        <a href="https://etstudios.cn" target="_blank" class="mdui-text-color-black-secondary">返回<a>EternalTide首页<br>
+    </div>
+        <script>
+    function Dotline(option) {
+        this.opt = this.extend({
+            dom: 'J_dotLine',
+            cw: 1000,
+            ch: 500,
+            ds: 100,
+            r: 0.5,
+            dis: 100
+        }, option);
+        this.c = document.getElementById(this.opt.dom);
+        this.ctx = this.c.getContext('2d');
+        this.c.width = this.opt.cw;
+        this.c.height = this.opt.ch;
+        this.dotSum = this.opt.ds;
+        this.radius = this.opt.r;
+        this.disMax = this.opt.dis * this.opt.dis;
+        this.dots = [];
+        var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+        var _self = this;
+        var mousedot = {
+            x: null,
+            y: null,
+            label: 'mouse'
+        };
+        this.c.onmousemove = function(e) {
+            var e = e || window.event;
+            mousedot.x = e.clientX - _self.c.offsetLeft;
+            mousedot.y = e.clientY - _self.c.offsetTop;
+        };
+        this.c.onmouseout = function(e) {
+            mousedot.x = null;
+            mousedot.y = null;
+        };
+        this.animate = function() {
+            _self.ctx.clearRect(0, 0, _self.c.width, _self.c.height);
+            _self.drawLine([mousedot].concat(_self.dots));
+            RAF(_self.animate);
+        };
+    }
+    Dotline.prototype.extend = function(o, e) {
+        for (var key in e) {
+            if (e[key]) {
+                o[key] = e[key];
+            }
+        }
+        return o;
+    };
+    Dotline.prototype.addDots = function() {
+        var dot;
+        for (var i = 0; i < this.dotSum; i++) {
+            dot = {
+                x: Math.floor(Math.random() * this.c.width) - this.radius,
+                y: Math.floor(Math.random() * this.c.height) - this.radius,
+                ax: (Math.random() * 2 - 1) / 1.5,
+                ay: (Math.random() * 2 - 1) / 1.5
+            };
+            this.dots.push(dot);
+        }
+    };
+    Dotline.prototype.move = function(dot) {
+        dot.x += dot.ax;
+        dot.y += dot.ay;
+        dot.ax *= (dot.x > (this.c.width - this.radius) || dot.x < this.radius) ? -1 : 1;
+        dot.ay *= (dot.y > (this.c.height - this.radius) || dot.y < this.radius) ? -1 : 1;
+        this.ctx.beginPath();
+        this.ctx.arc(dot.x, dot.y, this.radius, 0, Math.PI * 2, true);
+        this.ctx.stroke();
+    };
+    Dotline.prototype.drawLine = function(dots) {
+        var nowDot;
+        var _that = this;
+        this.dots.forEach(function(dot) {
+            _that.move(dot);
+            for (var j = 0; j < dots.length; j++) {
+                nowDot = dots[j];
+                if (nowDot === dot || nowDot.x === null || nowDot.y === null)
+                    continue;
+                var dx = dot.x - nowDot.x,
+                    dy = dot.y - nowDot.y;
+                var dc = dx * dx + dy * dy;
+                if (Math.sqrt(dc) > Math.sqrt(_that.disMax))
+                    continue;
+                if (nowDot.label && Math.sqrt(dc) > Math.sqrt(_that.disMax) / 2) {
+                    dot.x -= dx * 0.02;
+                    dot.y -= dy * 0.02;
+                }
+                var ratio;
+                ratio = (_that.disMax - dc) / _that.disMax;
+                _that.ctx.beginPath();
+                _that.ctx.lineWidth = ratio / 2;
+                _that.ctx.strokeStyle = 'rgba(0,0,0,' + (ratio + 0.2) + ')';
+                _that.ctx.moveTo(dot.x, dot.y);
+                _that.ctx.lineTo(nowDot.x, nowDot.y);
+                _that.ctx.stroke();
+            }
+        });
+    };
+    Dotline.prototype.start = function() {
+        var _that = this;
+        this.addDots();
+        setTimeout(function() {
+            _that.animate();
+        }, 100);
+        
+        // 更新 Dotline 对象的属性
+        window.addEventListener('resize', function() {
+        _that.c.width = _that.opt.cw = document.documentElement.clientWidth;
+        _that.c.height = _that.opt.ch = document.documentElement.clientHeight;
+    });
+    };
+
+    var dotline;
+
+    // function initializeDotLine() {
+    //     dotline = new Dotline({
+    //         dom: 'J_dotLine',
+    //         cw: document.documentElement.clientWidth,
+    //         ch: document.documentElement.clientHeight,
+    //         ds: 70,
+    //         r: 0.5,
+    //         dis: 80
+    //     }).start();
+    // }
+
+    // // 初始化 dotline
+    // initializeDotLine();
+    
+    window.onload = function() {
+    var dotline = new Dotline({
+        dom: 'J_dotLine',
+        cw: document.documentElement.clientWidth,
+        ch: document.documentElement.clientHeight,
+        ds: 70,
+        r: 0.5,
+        dis: 80
+    });
+
+    // 初始化 dotline
+    dotline.addDots();
+
+    // 监听窗口大小改变事件
+    window.addEventListener('resize', function() {
+        // 停止 dotline 的动画
+        cancelAnimationFrame(dotline.animate);
+        // 重新设置 canvas 的宽度和高度
+        dotline.c.width = document.documentElement.clientWidth;
+        dotline.c.height = document.documentElement.clientHeight;
+        // 更新 dotline 的属性
+        dotline.opt.cw = document.documentElement.clientWidth;
+        dotline.opt.ch = document.documentElement.clientHeight;
+        // 重新启动 dotline 的动画
+        dotline.animate();
+    });
+
+    // 启动动画
+    dotline.animate();
+};
+
+
+    // 监听窗口大小改变事件
+    window.onresize = function() {
+        // 停止 dotline 的动画
+        cancelAnimationFrame(dotline.animate);
+        // 重新设置 canvas 的宽度和高度
+        dotline.c.width = document.documentElement.clientWidth;
+        dotline.c.height = document.documentElement.clientHeight;
+        // 重新启动 dotline 的动画
+        initializeDotLine();
+    };
+    
+</script>
+</body>
+</html>
