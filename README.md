@@ -3,15 +3,15 @@
 简称: "永恒潮汐网络工作室"<br>
 创立于``2019`` ``7`` ``24``<br>
 
+### About 官网
+![官网 Data](https://img.shields.io/github/repo-size/EternalTide-Studios/Web)<br>
+![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JavaScript-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
+
 ### About Members
 此表为优秀员工名单<br>
 为每``5``月评选一次<br>
 一般情况下前``4``位为工作室高管,从第``5``为开始为员工<br>
 裁员制为超过``5``个月无任何发言的(除非手动告知任何特殊情况)<br>
-
-### 官网语言
-![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JavaScript-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
-
 
 ### LIVE us
 通过[outlook邮箱](mailto:EternalTide2019@outlook.com)<br>
