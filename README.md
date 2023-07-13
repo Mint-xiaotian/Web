@@ -3,11 +3,6 @@
 简称: "永恒潮汐网络工作室"<br>
 创立于``2019`` ``7`` ``24``<br>
 
-### 目录Menu
-- [Abou Members](https://github.com/EternalTide-Studios/Web/blob/main/README.md#about-members)
-- [lIVE us](https://github.com/EternalTide-Studios/Web/blob/main/README.md#live-us)
-- [合作伙伴](https://github.com/EternalTide-Studios/Web/blob/main/README.md#合作伙伴)
-
 ### About Members
 此表为优秀员工名单<br>
 为每``5``月评选一次<br>
