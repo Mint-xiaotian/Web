@@ -17,3 +17,7 @@
 | <img itemprop="image" class="avatar flex-shrink-0 mb-3 mr-3 mb-md-0 mr-md-4" src="ZGIT.jpg?s=200&amp;v=4" width="100" height="100"> |
 |-------------------|
 | ZGIT-Network      |
+
+### LICENSE
+本项目使用``麻省理工学院``的``MIT`` ``许可证`` 作为本项目的LICENSE<br>
+你在使用and转载时应该遵守此``MIT`` ``许可证`` <br>
