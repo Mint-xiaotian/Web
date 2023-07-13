@@ -1,9 +1,11 @@
 name: Notice Issues and Pull requets
 
 on:
-  issues:
+  PR:
+   types:
+     - Pull requets
+  Issues:
     types:
-      - PR
       - Issues
       
 jobs:
