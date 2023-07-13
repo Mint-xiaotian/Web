@@ -10,7 +10,7 @@
 裁员制为超过``5``个月无任何发言的(除非手动告知任何特殊情况)<br>
 
 ### 官网语言
-![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JS-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
+![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JavaScript-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
 
 
 ### LIVE us
