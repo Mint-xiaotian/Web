@@ -9,6 +9,10 @@
 一般情况下前``4``位为工作室高管,从第``5``为开始为员工<br>
 裁员制为超过``5``个月无任何发言的(除非手动告知任何特殊情况)<br>
 
+### 官网语言
+![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JS-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
+
+
 ### LIVE us
 通过[outlook邮箱](mailto:EternalTide2019@outlook.com)<br>
 如果邮件链接不起作用,那么手动发送至 ``EternalTide2019(at)outlook.com`` <br>
@@ -21,3 +25,5 @@
 ### LICENSE
 本项目使用``麻省理工学院``的``MIT`` ``许可证`` 作为本项目的LICENSE<br>
 你在使用and转载时应该遵守此``MIT`` ``许可证`` <br>
+
+Copyright ©EternalTide Studios版权所有
