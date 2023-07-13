@@ -1,0 +1,18 @@
+name: Notice Issues and Pull requets
+
+on:
+  issues:
+    types:
+      - PR
+      - Issues
+      
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Notice Issues and Pull requets
+        uses: peaceiris/actions-label-commenter@v1
+        with:
+          github_token: ${{ secrets.NT }}
+          config_file: .github/CNA.yml
