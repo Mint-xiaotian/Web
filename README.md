@@ -18,7 +18,7 @@
 如果邮件链接不起作用,那么手动发送至 ``EternalTide2019(at)outlook.com`` <br>
 
 ### 合作伙伴
-| <img itemprop="image" class="avatar flex-shrink-0 mb-3 mr-3 mb-md-0 mr-md-4" src="ZGIT.jpg?s=200&amp;v=4" width="100" height="100"> |
+| <img itemprop="image" class="avatar flex-shrink-0 mb-3 mr-3 mb-md-0 mr-md-4" src="https://avatars.githubusercontent.com/u/139145325?s=200&v=4?s=200&amp;v=4" width="60" height="60">  |
 |-------------------|
 | ZGIT-Network      |
 
