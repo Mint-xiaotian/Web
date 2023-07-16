@@ -26,4 +26,4 @@
 本项目使用``麻省理工学院``的``MIT`` ``许可证`` 作为本项目的LICENSE<br>
 你在使用and转载时应该遵守此``MIT`` ``许可证`` <br>
 
-Copyright ©EternalTide Studios版权所有
+``Copyright`` ``©`` ``EternalTide Studios`` ``版权所有``
