@@ -7,13 +7,6 @@
 ![官网 Data](https://img.shields.io/github/repo-size/EternalTide-Studios/Web)<br>
 ![](https://img.shields.io/badge/language-HTML-orange) ![](https://img.shields.io/badge/language-JavaScript-yellow) ![](https://img.shields.io/badge/language-CSS-purple)
 
-### About EtID
-每个人拥有独一无二的``EtID``<br>
-因为``EtID``将代表你的身份<br>
-*如果我们执行裁员那么每个人的``EtID``会重新分配!请熟知*<br>
-```可能在30日之内,你不能使用你的新EtID```<br>
-```你可以通过QQ联系L或者Tian_Tempest为你添加!```<br>
-
 ### LIVE us
 通过[outlook邮箱](mailto:EternalTide2019@outlook.com)<br>
 如果邮件链接不起作用,那么手动发送至 ``EternalTide2019(at)outlook.com`` <br>
