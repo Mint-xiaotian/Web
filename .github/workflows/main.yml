@@ -2,8 +2,8 @@ name: PR
 
 on: # 满足什么条件触发
   pull_request_target:
-	types:
-	  - Open
+types:
+    - Open
 
 jobs:
   read-file:
